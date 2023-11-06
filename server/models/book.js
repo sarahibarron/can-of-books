@@ -9,6 +9,7 @@ const bookSchema = new Schema({
   year: Number,
   rating: Number,
   summary: String,
+  status: String,
 });
 
 const Book = mongoose.model("Book", bookSchema);

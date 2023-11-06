@@ -4,12 +4,18 @@ require("dotenv").config;
 const app = express();
 app.use(cors());
 const PORT = 8080;
+
 const mongoose = require("mongoose");
+const Book = require("./models/book");
+mongoose.connect(process.env.DATABASE_URL);
 
-mongoose.connect(porcess.env.DATABASE_URL)
+app.get("/", (_, response) => {
+  response.json("You are looking at my root route. Roude.");
+});
 
+app.get("/books", async (request, response) => {
+  const books = await Book.find(request.query);
+  response.json(books);
+});
 
-
-[
-  //array
-];
+app.listen(PORT, () => console.log(`App is running on port ${PORT}`));
