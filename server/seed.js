@@ -48,6 +48,7 @@ async function seed() {
       status: "Read",
     },
   ]);
+  console.log("This is working really well!");
   mongoose.disconnect();
 }
 
