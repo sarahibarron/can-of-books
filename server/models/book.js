@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const bookSchema = new Schema({
-  name: String,
+  title: String,
   imgUrl: String,
   author: String,
   year: Number,
