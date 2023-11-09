@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "./pages/About";
-import Book from "./pages/Book";
+import About from "./pages/about";
+import Book from "./pages/book";
 
 function App() {
   const [books, setBooks] = useState([]);
